@@ -124,7 +124,7 @@ body{
 }
 
 .work{
-  margin: 5rem 10%;
+  margin: 5rem 10% 2rem 10%;
 }
 
 .pre-text{
@@ -138,7 +138,7 @@ body{
 
 .pre-head{
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 2.5rem;
 }
 
@@ -172,7 +172,7 @@ body{
 
 .box-theme:hover {
   background: #000;
-  border: 2px solid #fff;
+  outline: 2px solid #fff;
   color: #fff;
 }
 
@@ -240,6 +240,31 @@ body{
 .web-links a:hover h4{
   color: #fff;
 }
+
+.em, .ph{
+  margin-bottom: 0.5rem;
+}
+
+.he, .hn{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footer h5{
+  color: #797575;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5% 2rem 5%;
+}
+
 @media (min-width: 768px){
   .intro h1{
     font-size: 5.5rem;
@@ -250,6 +275,10 @@ body{
   }
   .box-theme{
     height: 20rem;
+  }
+  .contact{
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
 
