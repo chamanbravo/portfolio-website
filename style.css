@@ -3,3 +3,98 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-family: Calibre-Regular,sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+.header{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.header .logo{
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #09f755;
+}
+
+.hero{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hero:after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background: url("assets/home-bg.svg") no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.intro{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.intro h5{
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.intro h1{
+  font-size: 5.5rem;
+  margin: 1rem 0;
+  background: url("assets/bg.gif");
+  background-size: cover
+  background-clip: text;
+  -webkit-background-clip: text;
+  color:  transparent;
+}
+
+.intro h4{
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+  color: #09f755;
+}
+
+.me{
+  font-size: 0.8rem;
+  color: #797575;
+  width: 35ch;
+  line-height: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+    background: #09f755;
+    padding: 1rem 2.8rem;
+    border-radius: 10rem;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-decoration: NONE;
+    border: 1px solid #09f755;
+    font-family: Calibre-SemiBold,sans-serif;
+    color: #000;
+    transition: all .3s ease-in-out;
+  }
+
+  .cta:hover{
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+  }
