@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;400;600;800&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body{
-  font-family: Calibre-Regular,sans-serif;
+  font-family: "Catamaran" ,sans-serif;
   background: #000;
   color: #fff;
 }
@@ -23,11 +25,7 @@ body{
 }
 
 .hero{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+  height: 100vh;
 }
 
 .hero:after{
@@ -55,10 +53,11 @@ body{
 }
 
 .intro h1{
-  font-size: 5.5rem;
+  font-family: sans-serif;
+  font-size: 4.5rem;
   margin: 1rem 0;
   background: url("assets/bg.gif");
-  background-size: cover
+  background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color:  transparent;
@@ -71,9 +70,10 @@ body{
 }
 
 .me{
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: #797575;
-  width: 35ch;
+  width: 30ch;
   line-height: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -88,7 +88,7 @@ body{
     font-weight: 600;
     text-decoration: NONE;
     border: 1px solid #09f755;
-    font-family: Calibre-SemiBold,sans-serif;
+    font-family: "Catamaran" ,sans-serif;
     color: #000;
     transition: all .3s ease-in-out;
   }
@@ -98,3 +98,90 @@ body{
     background: transparent;
     color: #fff;
   }
+
+  .navbtn{
+    background: #000;
+    border-radius: 50%;
+    position: fixed;
+    top: 3.25%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 0.8rem;
+  }
+
+.bar1, .bar2, .bar3{
+  background: #fff;
+  width: 25px;
+  height: 2px;
+}
+
+.bar2{
+    width: 35px;
+}
+
+.work{
+  margin: 5rem 10%;
+}
+
+.pre-text{
+  color: #797575;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.pre-head{
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 3.5rem;
+}
+
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+
+.box-theme{
+  padding: 1rem;
+  background: linear-gradient(45deg, #53f1f1, #b757e8d4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 25rem;
+}
+
+.work-link{
+  display: flex;
+  align-self: flex-end;
+}
+
+.work-link a{
+  margin-left: 1rem;
+  font-size: 1.7rem;
+  color: #000;
+}
+
+.work-name h3{
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.stack-used{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px){
+  .intro h1{
+    font-size: 5.5rem;
+  }
+}
