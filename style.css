@@ -83,7 +83,7 @@ body{
     background: #09f755;
     padding: 1rem 2.8rem;
     border-radius: 10rem;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
     font-weight: 600;
     text-decoration: NONE;
@@ -133,7 +133,7 @@ body{
   letter-spacing: 2.5px;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .pre-head{
@@ -146,6 +146,7 @@ body{
   display: grid;
   grid-gap: 2rem;
   color: #000;
+  margin-bottom: 6rem;
 }
 
 .box-theme{
@@ -208,10 +209,37 @@ body{
 }
 
 .stack-used h5{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 
+.web-links{
+    border: 1px solid #797575;
+    border-bottom: 5px solid #09f755;
+    padding: 0.8rem 1.5rem;
+}
+
+.web-links a{
+  display: flex;
+  flex-direction: column;
+  color: #797575;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.web-links a i{
+  align-self: flex-end;
+  font-size: 1.5rem;
+}
+
+.web-links a h4{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.web-links a:hover h4{
+  color: #fff;
+}
 @media (min-width: 768px){
   .intro h1{
     font-size: 5.5rem;
