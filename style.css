@@ -139,13 +139,13 @@ body{
 .pre-head{
   font-size: 2.2rem;
   font-weight: 400;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .work-list{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 2rem;
+  color: #000;
 }
 
 .box-theme{
@@ -155,7 +155,32 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 25rem;
+  height: 20rem;
+  position: relative;
+}
+
+.box-theme:after{
+  content: "";
+  position: absolute;
+  width: 103%;
+  height: 101%;
+  top: 1rem;
+  right: 0;
+  z-index: -1;
+}
+
+.box-theme:hover {
+  background: #000;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.box-theme:hover a{
+  color: #fff;
+}
+
+.box-theme:hover:after{
+  outline: 2px solid #fff;
 }
 
 .work-link{
@@ -172,6 +197,8 @@ body{
 .work-name h3{
   margin-bottom: 5rem;
   font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem;
 }
 
 .stack-used{
@@ -180,8 +207,31 @@ body{
   justify-content: space-between;
 }
 
+.stack-used h5{
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
 @media (min-width: 768px){
   .intro h1{
     font-size: 5.5rem;
+  }
+  .work-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box-theme{
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .work-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+  .box-theme{
+    height: 22rem;
   }
 }
