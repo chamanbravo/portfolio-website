@@ -97,34 +97,97 @@ a{
     transition: all .3s ease-in-out;
   }
 
-  .cta:hover{
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-  }
+.cta:hover{
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
 
-  .navbtn{
-    background: #000;
-    border-radius: 50%;
-    position: fixed;
-    top: 3.25%;
-    right: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 1rem 0.8rem;
-  }
+.navbtn, .navclicked{
+  position: fixed;
+  top: 3.65%;
+  right: 5%;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 3.20rem;
+  width: 3.20rem;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
 
 .bar1, .bar2, .bar3{
   background: #fff;
   width: 25px;
   height: 2px;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 .bar2{
     width: 35px;
+}
+
+.navbtn .bar1 {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navbtn .bar2 {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navbtn .bar3{
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.navclicked .bar1 {
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.navclicked .bar2 {
+  width: 0%;
+  opacity: 0;
+}
+
+.navclicked .bar3 {
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .work{
@@ -187,6 +250,27 @@ a{
 .box-theme:hover:after{
   outline: 2px solid #fff;
 }
+
+.work-box1{
+  background: linear-gradient(180deg,#f3cbab,#feedca);
+}
+
+.work-box2{
+  background: linear-gradient(180deg,#b1e5f9,#f4d2fe);
+}
+
+.work-box3{
+  background: linear-gradient(180deg,#dbb4f3,#efb7d7);
+}
+
+.work-box4{
+  background: linear-gradient(180deg,#efa971,#e4cafe);
+}
+
+.work-box5{
+  background: linear-gradient(90deg,#b1e5f9,#f4d2fe);
+}
+
 
 .work-link{
   display: flex;
