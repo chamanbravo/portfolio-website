@@ -131,7 +131,6 @@ a{
   background: #fff;
   width: 25px;
   height: 2px;
-  background: #fff;
   border-radius: 9px;
   opacity: 1;
   -webkit-transform: rotate(0deg);
@@ -146,27 +145,6 @@ a{
 
 .bar2{
     width: 35px;
-}
-
-.navbtn .bar1 {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-.navbtn .bar2 {
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
-}
-
-.navbtn .bar3{
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
 }
 
 .navclicked .bar1 {
