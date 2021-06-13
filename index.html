@@ -179,11 +179,15 @@
     </section>
 
     <section class="footer">
-      <h5>© 2021 Chaman Bravo</h5>
+      <div class="copyright-txt">
+        <h5>©<h5 id="year"></h5><h5>Chaman Bravo</h5>
+      </div>
       <img src="assets/recreate.svg" alt="recreate">
     </section>
 
 
-    <script type="text/javascript"> </script>
+    <script type="text/javascript">
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
   </body>
 </html>

@@ -267,6 +267,14 @@ a{
   font-weight: 600;
 }
 
+.copyright-txt{
+  display: inline-flex;
+}
+
+.copyright-txt h5{
+  margin-right: 5px;
+}
+
 .footer{
   display: flex;
   justify-content: space-between;
