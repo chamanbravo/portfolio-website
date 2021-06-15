@@ -3,17 +3,24 @@ document.querySelector(".copyright-txt").innerHTML = `© ${new Date().getFullYea
 
 //nav btn
 var navbtn = document.querySelector(".navbtn");
-var overlay = document.querySelector(".overlay");
 var body = document.querySelector("body");
 var menuItems = document.querySelector(".menu-items");
 
 navbtn.addEventListener("click", openMenu);
 
+//gsap
+const tl = gsap.timeline({paused:true, reversed: true});
+tl.to('.box', {height: '100vh', duration: .5, transformOrigin: 'bottom', stagger: .3})
+tl.to('.menu-items', {opacity: '1', visibility: 'visible', duration: .5, stagger: .3})
+
 function openMenu() {
   navbtn.classList.toggle("navclicked");
-  overlay.classList.toggle("overlayclose");
   body.classList.toggle("overflow");
-  menuItems.classList.toggle("menuopen");
+  if(tl.reversed()){
+    tl.play();
+  }else{
+    tl.reverse();
+  }
 }
 
 
