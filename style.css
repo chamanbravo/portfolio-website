@@ -8,11 +8,20 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Catamaran" ,sans-serif;
   background: #000;
   color: #fff;
   overflow-x: hidden;
+}
+
+.scroll-wrapper{
+  transition: transform .25s;
+  will-change: transform;
 }
 
 .overflow{
@@ -208,12 +217,13 @@ a{
 .menu-items{
   margin: 5rem 5%;
   z-index: 100;
-  position: relative;
+  position: fixed;
   flex-direction: column;
   justify-content: space-between;
   color: #000;
   opacity: 0;
   visibility: none;
+  z-index: 100;
 }
 
 .menuopen{
@@ -475,7 +485,7 @@ a{
   }
   .menu-items{
     z-index: 100;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 15%;
     transform: translate(-15%, -40%);
