@@ -42,6 +42,14 @@ a{
   pointer-events: none;
   border-radius: 50%;
   position: absolute;
+  z-index: 2;
+  display: none;
+}
+
+.overlayCursor{
+  background: rgba(12, 117, 248, 0.98);
+  mix-blend-mode: normal;
+  z-index: 100;
 }
 
 .header{
@@ -393,7 +401,8 @@ a{
 }
 
 .stack-used{
-  display: flex;
+  display: inline-flex;
+  gap: 1.5rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -468,6 +477,11 @@ a{
   margin: 0 5% 2rem 5%;
 }
 
+.content{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px){
   .intro h1{
     font-size: 5.5rem;
@@ -508,6 +522,9 @@ a{
 }
 
 @media (min-width: 1024px){
+  .cursor{
+    display: block;
+  }
   .work-list{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
