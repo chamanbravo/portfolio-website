@@ -1,3 +1,11 @@
+//loader
+window.onload = function(){
+ setTimeout(function(){
+   document.querySelector("body").classList.toggle("overflow");
+   document.querySelector(".loader").style.display = "none";
+ }, 1000);
+};
+
 //copyright text
 document.querySelector(".copyright-txt").innerHTML = `© ${new Date().getFullYear()} Chaman Bravo`;
 
@@ -52,7 +60,6 @@ links.addEventListener('click', () => {
     tl.reverse();
     navbtn.classList.toggle("navclicked");
     body.classList.toggle("overflow");
-    console.log("Whaaat");
 });
 
 //skew scroll
