@@ -2,8 +2,10 @@
 window.onload = function(){
  setTimeout(function(){
    document.querySelector("body").classList.toggle("overflow");
-   document.querySelector(".loader").style.display = "none";
- }, 1000);
+   const preloaderTL = gsap.timeline();
+   preloaderTL.to('.parent', {yPercent: -20, opacity: 0})
+   preloaderTL.to('.loader', {transform: 'scaleY(0)', transformOrigin: 'top',  delay: 1})
+ }, 2000);
 };
 
 //copyright text

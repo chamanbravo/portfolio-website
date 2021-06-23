@@ -8,6 +8,16 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  width: 3px;
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #32a99e;
+}
+
+
 html{
   scroll-behavior: smooth;
 }
@@ -24,67 +34,152 @@ body{
 }
 
 .loader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: #000;
     z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .parent{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  transition: all 0.4s ease-in;
 }
 
-.jello{
-  height: 2px;
-  width: 150px;
-  background: red;
-  position: relative;
+.parent p{
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
-.jello span{
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: green;
-  position: absolute;
-  left: 50%;
-  bottom: 100%;
-  transform: translateX(-50%);
-  transition: all 0.5s ease;
-  animation: bounce 1.2s linear infinite;
+
+#movingBallG{
+	position:relative;
+	width:250px;
+	height:19px;
+	margin:auto;
 }
-@keyframes bounce{
-  0%{
-      width: 15px;
-      height: 15px;
-      transform: translate(-50%, -50px);
-    }
-  50%{
-       width: 15px;
-       height: 15px;
-       transform: translate(-50%, 0);
-      }
-  51%{
-       width: 18px;
-       height: 12px;
-     }
-  60%{
-       width: 15px;
-       height: 15px;
-     }
-  100%{
-        transform: translate(-50%, -50px);
-        height: 15px;
-        width: 15px;
-      }
+
+.movingBallLineG{
+	position:absolute;
+	left:0px;
+	top:8px;
+	height:4px;
+	width:250px;
+	background-color: #09f755;
+}
+
+.movingBallG{
+	background-color: #09f755;
+	position:absolute;
+	top:0;
+	left:0;
+	width:19px;
+	height:19px;
+	border-radius:10px;
+		-o-border-radius:10px;
+		-ms-border-radius:10px;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+	animation-name:bounce_movingBallG;
+		-o-animation-name:bounce_movingBallG;
+		-ms-animation-name:bounce_movingBallG;
+		-webkit-animation-name:bounce_movingBallG;
+		-moz-animation-name:bounce_movingBallG;
+	animation-duration:1.5s;
+		-o-animation-duration:1.5s;
+		-ms-animation-duration:1.5s;
+		-webkit-animation-duration:1.5s;
+		-moz-animation-duration:1.5s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+}
+
+
+
+@keyframes bounce_movingBallG{
+	0%{
+		left:0px;
+	}
+
+	50%{
+		left:230px;
+	}
+
+	100%{
+		left:0px;
+	}
+}
+
+@-o-keyframes bounce_movingBallG{
+	0%{
+		left:0px;
+	}
+
+	50%{
+		left:230px;
+	}
+
+	100%{
+		left:0px;
+	}
+}
+
+@-ms-keyframes bounce_movingBallG{
+	0%{
+		left:0px;
+	}
+
+	50%{
+		left:230px;
+	}
+
+	100%{
+		left:0px;
+	}
+}
+
+@-webkit-keyframes bounce_movingBallG{
+	0%{
+		left:0px;
+	}
+
+	50%{
+		left:230px;
+	}
+
+	100%{
+		left:0px;
+	}
+}
+
+@-moz-keyframes bounce_movingBallG{
+	0%{
+		left:0px;
+	}
+
+	50%{
+		left:230px;
+	}
+
+	100%{
+		left:0px;
+	}
 }
 
 .scroll-wrapper{
