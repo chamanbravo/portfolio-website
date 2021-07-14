@@ -98,3 +98,6 @@ function skewEffect() {
 }
 
 skewEffect();
+
+//
+console.log("%cHello fellow developer 👋","background: linear-gradient(90deg, rgba(31,163,95,0.9139005944174545) 0%, rgba(13,112,153,0.8018557764902836) 48%, rgba(0,212,255,1) 100%); color: white; font-family: sans-serif; font-size: 1rem;  padding: 0.3rem 0.2rem;");
